@@ -1,0 +1,39 @@
+### d'abord rails new taupiniere -d mysql:wq
+# add gem rspec-rails, factory_bot_rails
+rails generate rspec:install
+# add "config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" to config/environments/development.rb"
+# edit controllers/application_controller.rb
+# copy views/application/welcome and _flash.html.erb
+# copy/edit config/initializers/constants.rb
+rails webpacker:install
+rails generate model user email:string name:string firstname:string birthday:date admin:boolean teacher:boolean questioner:boolean password_digest:string 
+rails g controller UserSessions # ??? and edit to inherit Devise::SessionsController
+# edit layouts/application
+# copy assets/images
+# copy scss files
+# copy devise.fr.yml and fr.yml files
+# add in application.rb 
+#config.i18n.available_locales = [:en,:fr]
+#config.i18n.default_locale = :fr
+rails generate model Group name:string
+rails generate model GroupComposition user:references group:references
+rails g controller admin/groups index
+# create admin/basecontroller
+rails g model Room name:string chat:boolean documents:boolean homeworks:boolean agenda:boolean for_teachers:boolean for_questioners:boolean
+rails g model RoomUserRight user:references room:references view:boolean post:boolean
+rails g model RoomGroupRight group:references room:references 
+rails g controller admin/rooms index
+rails g model ChatRoom room:references
+rails g model Document attachment:string description:text parent:references content_type:string
+rails g model ChatPost chat_room:references user:references content:text citation:references document:references
+rails g controller Rooms
+rails g controller ChatRooms
+rails g channel chat_room
+# edit channels/chat_room_channel.rb channels/application_cable/connection.rb javascript/channels/chat_room.js
+rails g model Folder parent:references room:references name:string type:integer
+# add carrierwave to Gemfile
+rails g uploader Document
+# edit uploaders/document_uploader.rb
+rails g controller Documents
+rails g controller Folders
+rails g controller admin/users index

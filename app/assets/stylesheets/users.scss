@@ -1,0 +1,66 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#users-bar {
+    float: right;
+    border: outset 3px cyan;
+    padding: 5px;
+    
+    &.normal {
+        background-color: #dff;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .user-status-image {
+        position: relative;
+
+        .user-status-avatar {
+            position:relative; 
+            top: 0px; 
+            left: 0px; 
+            z-index: 1;
+        }
+        .user-status-dot {
+            position:absolute; 
+            top: 0px; 
+            left: 0px; 
+            z-index: 1;
+        }
+
+    }
+}
+
+#admin-users {
+    display: table;
+    width: 100%;
+}
+
+.admin-user-row {
+    display: table-row;
+}
+
+.admin-user-row div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.admin-user-actions form {
+    display: inline-block;
+    border: solid 0.5pt;
+    vertical-align: top;
+    border-radius: 2pt;
+
+    input {
+        vertical-align: middle;
+    }
+    a {
+        vertical-align: middle;
+    }
+}
+

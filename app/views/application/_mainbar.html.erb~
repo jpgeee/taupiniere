@@ -1,0 +1,6 @@
+<li>Admin:
+    <ul>
+        <li><%=link_to "Groupes", admin_groups_index_path %></li>
+        <li><%=link_to "Salons", admin_rooms_index_path %></li>
+    </ul>
+</li>

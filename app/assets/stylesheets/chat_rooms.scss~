@@ -1,0 +1,61 @@
+// Place all the styles related to the chat_rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.chat-post {
+    width:70%;
+    margin-left: 8%;
+    margin-right: 22%;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    background-color: cyan;
+    border-radius: 12px;
+    padding: 16px;
+    padding-top: 32px;
+    position: relative;
+
+    &.mypost {
+        margin-left: 22%;
+        margin-right: 8%;
+        background-color: yellow;
+    }
+
+    .post-user, .post-actions {
+        position: absolute;
+        top:-10px;
+        left:10px;
+        border: solid 0.5px;
+        font-size:0.7em;
+        font-style: italic;
+        background: rgba(0.8,0.8,0.8,0.3);
+        padding: 3px;
+        border-radius: 8px;
+    }
+    .post-date {
+        position: absolute;
+        top:0px;
+        right:10px;
+        border: solid 0.5px;
+        font-size:0.7em;
+        font-style: italic;
+        background: rgba(0.8,0.8,0.8,0.3);
+        padding: 3px;
+        border-radius: 8px;
+    }
+
+    .post-attachment {
+        margin-left: 5%;
+        width:85%;
+        border: solid 0.1px;
+        padding: 8px;
+        border-radius: 8px;
+        background: rgba(0.9,0.9,0.9,0.2);
+        img {
+            max-width:300px;
+            max-height:300px;
+        }
+    }
+}
+
+#new-chat-post-attachment {
+}

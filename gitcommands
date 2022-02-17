@@ -1,0 +1,10 @@
+git init
+git add .
+git commit -m "Essai de login"
+git remote add origin git@github.com:jpgeee/taupiniere.git
+git push origin master -u # pass: ssh_for_taupiniere
+
+
+##
+git clone -b master https://github.com/jpgeee/taupiniere.git
+cp -rf taupiniere/* .

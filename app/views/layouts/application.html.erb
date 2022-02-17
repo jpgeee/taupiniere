@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title><%=ENT_NAME%></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      
+      <div id="main-bar" class="normal">
+          <span id="main-actions"><%=link_to link_to image_tag("links/logout_link.png",alt:"Déconnexion",title:"Déconnexion", size: 36), '/logout'%></span>
+          <ul id="main-list">
+            <% if current_user.admin? %>
+                <%= render partial: "admin/mainbar" %>
+            <% else %>
+                <%= render partial: "application/user_mainbar" %>
+            <% end %>
+          </ul>
+          <ul>
+              <li><%#link_to "Personnel", edit_user_path(current_user) %></li>
+              <%#render partial: "rooms/rooms_bar" %>
+          </ul>
+      </div>
+      
+      
+      <div id="mainframe">
+        <%= yield %>
+      </div>
+  </body>
+</html>

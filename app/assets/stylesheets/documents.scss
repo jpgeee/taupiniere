@@ -1,0 +1,83 @@
+// Place all the styles related to the Documents controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.folder-indent {
+    padding-left:1cm;
+}
+.folder-tab {
+    padding-left:1cm;
+}
+#folder-new, #doc-new {
+    display: inline;
+    margin: 0;
+    padding: 13px;
+
+    form {
+        display: inline;
+    }
+}
+.folder-symbol {
+    vertical-align: middle;
+}
+#folder-content {
+    ul {
+        display: block;
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+
+        li {
+            padding: 0px;
+            margin: 0px;
+
+            p {
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+    }
+}
+.folder-actions, .doc-actions {
+    float: right;
+}
+.doc-show {
+    margin: 0;
+    padding: 13px;
+
+    .doc-actions {
+        visibility: hidden;
+    }
+
+    &:hover {
+        .doc-actions {
+            visibility: visible;
+        }
+    }
+}
+.folder-show {
+    margin: 0;
+    padding: 13px;
+
+    .folder-actions {
+        visibility: hidden;
+    }
+
+    &:hover {
+        .folder-actions {
+            visibility: visible;
+        }
+    }
+}
+.doc-new-form {
+    border: dashed 1px;
+}
+.doc-new-desc {
+    display: inline-block;
+}
+
+.doc-date {
+    font-size: 0.7em;
+}
+.folder-summary {
+    font-size: 0.7em;
+}
